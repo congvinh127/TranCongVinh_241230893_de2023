@@ -1,0 +1,10 @@
+﻿@model List<LoaiHang>
+<ul>
+    <li class="active"><a asp-controller="Home" asp-action="Index">Trần Công Vinh</a>></li>
+    @foreach (var l in Model)
+    {
+        <li><a class="Loai-link" asp-controller="HangHoa" asp-action="ByLoai" asp-route-id="@l.MaLoai">@l.TenLoai</a></li>
+
+    }
+    <div class="clear"></div>
+</ul>

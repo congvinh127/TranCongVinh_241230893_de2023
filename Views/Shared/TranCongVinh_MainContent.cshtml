@@ -1,0 +1,20 @@
+﻿@model List<HangHoa>
+<div class="content-top">
+    <div class="heading"><h3>@ViewBag.Tieu</h3></div>
+    <div class="see"<p><a href="#">See all Products</a></p>></div>
+    <div class="clear"></div>
+</div>
+<div class="section group">
+    @foreach (var h in Model)
+    {
+        <div class="grid_1_of_4 images_1_of_4">
+            <a href="#"><img src="~/Content/images/@h.Anh" alt="" /></a>
+            <h2>@h.TenHang</h2>
+            <div class="price-details">
+                <div class="price-number"><p><span class="rupees">@h.Gia?.ToString("0")</span></p></div>
+                <div class="add_cart"><h4><a href="#" style="color:red">Add to Cart</a></h4>></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    }
+</div>

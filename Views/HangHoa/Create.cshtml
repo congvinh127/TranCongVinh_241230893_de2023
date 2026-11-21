@@ -1,0 +1,15 @@
+﻿@model HangHoa
+<div>Trần Công Vinh</div>
+<div>Thêm Hàng Hóa mới</div>
+<hr />
+<form asp-action="Create" method="post">
+    <div>MaLoai</div>
+    <select asp-for="MaLoai" asp-items="ViewBag.MaLoai"></select>
+    <div>TenHang</div>
+    <input asp-for="TenHang" /><spa asp-validation-for="TenHang" style="color:red"></span>
+    <div>Gia</div>
+    <input asp-for=Gia" /><spa asp-validation-for="Gia" style="color:red"></span>
+    <div>Anh</div>
+    <input asp-for=Anh" /><spa asp-validation-for="Anh" style="color:red"></span>
+<div><input type="submit" value="Create"/></div>
+</form>
